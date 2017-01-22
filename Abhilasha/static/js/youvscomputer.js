@@ -33,15 +33,12 @@ function gameResult(choice) {
 			}else {
 				resultofGame('won');
 			}
-		}else if(choice1 === 'scissors') {
+		}else {
 			if(choice2 === 'paper'){
 				resultofGame('won');
 			}else {
 				resultofGame('lost');
 			}
-		}else {
-			alert("Wrong choice , you should select among Rock , Paper or Scissors!!");
-   			document.getElementById("dropdownMenu1").value = '';
 		}
 
    	}
@@ -49,17 +46,17 @@ function gameResult(choice) {
 /*Function to show hide the buttons according to the result*/
 function resultofGame (result) {
 	if(result === 'won'){
-		document.getElementById("won").className = "btn btn-primary";
+		document.getElementById("won").className = "alert alert-success";
    		document.getElementById("tie").className = "hide";
    		document.getElementById("lost").className = "hide";
    		calculateScore('won');
 	}else if(result === 'lost'){
-		document.getElementById("lost").className = "btn btn-danger";
+		document.getElementById("lost").className = "alert alert-danger";
    		document.getElementById("won").className = "hide";
    		document.getElementById("tie").className = "hide";
    		calculateScore('lost');
 	}else {
-		document.getElementById("tie").className = "btn btn-info";
+		document.getElementById("tie").className = "alert alert-info";
 		document.getElementById("lost").className = "hide";
 		document.getElementById("won").className = "hide";
 	}
@@ -81,5 +78,9 @@ function calculateScore (result){
 function resetScore (){
 	document.getElementById("yourScore").innerHTML = 0;
 	document.getElementById("compScore").innerHTML = 0;
-	document.getElementById('compChoice').innerHTML = ''; 
+	var elementExists = document.getElementById('compChoice');
+	if(elementExists != null){
+		document.getElementById('compChoice').innerHTML = ''; 
+	}
+	
 }

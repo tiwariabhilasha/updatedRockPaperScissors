@@ -30,6 +30,10 @@ app.get('/youvscomputer',function(req,res){
   res.sendFile(path.join(__dirname+'/static/youvscomputer.html'));
 });
 
+app.get('/moreoptionstoplay',function(req,res){
+  res.sendFile(path.join(__dirname+'/static/moreoptionstoplay.html'));
+});
+
 app.use(express.static(__dirname + '/static'));
 var port = process.env.PORT || 8000;
 

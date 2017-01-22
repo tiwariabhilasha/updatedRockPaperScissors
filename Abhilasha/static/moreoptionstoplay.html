@@ -1,10 +1,11 @@
 <html>
 <head>
-  <title>Rock, Paper, Scissors</title>
+  <title>Rock, Paper, Scissors, Lizard & Spock</title>
   <script src="js/jquery.min.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <script src="js/bootstrap.min.js"></script>
+  <script type="application/javascript" src="js/moreoptions.js"></script>
   <script type="application/javascript" src="js/youvscomputer.js"></script>
   <link rel="stylesheet" type="text/css" href="css/compvscomp.css">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -16,32 +17,31 @@
 
 </head>
 <body>
-<div class="jumbotron">
+  <div class="jumbotron">
       <div class="container">
-          <h2>Let's Play Rock Paper Scissors!</h2>
+          <h2>Extended our options..we have Lizard and Spock as more options.</h2>
           <hr/>
           <nav class="navbar navbar-inverse navbar-static-top" role=”navigation”>
           <ul class="nav navbar-nav" role="menu">
           <li role="presentation">
             <a href="/" role="menuitem" alt="watch two computers play">Watch two computers play!</a>
           </li>
-          <li class="active" role="presentation">
-            <a href="/youvscomputer" role="menuitem" alt="want to play with the computer, click here">Want to play with the computer, click here!</a>
+          <li>
+            <a href="/youvscomputer" role="menuitem" alt="want to play with the computer, click here">Want to play with the computer,click here!</a>
           </li>
-          <li role="presentation">
+          <li class="active">
             <a href="/moreoptionstoplay" role="menuitem" alt="Rock, Paper, Scissors, Lizard & Spock">Rock, Paper, Scissors, Lizard & Spock!!</a>
           </li>
           </ul>
           </nav>
       </div>
   </div>
-
-<div class="container">
+  <div class="container">
     
 
        <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
-              <div class="alert alert-success" role="alert">Rules for Playing...Rock beats Scissors, Scissors cuts Paper, Paper covers Rock</div>
+              <div class="alert alert-success" role="alert">Rules for Playing...Rock beats Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Spock vaporizes Rock, Spock smashes Scissors, Scissors decapitates Lizard, Paper disproves Spock, Lizard eats Paper, Lizard poisons Spock.</div>
               <div class="alert alert-info" role="alert">Make a choice from the dropdown, see what the computer chose and check out the result!</div>
         </div>
       </div>
@@ -57,9 +57,11 @@
                 <span class="caret"></span>
                 </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a onclick="gameResult('Rock')">Rock</a></li>
-                    <li><a onclick="gameResult('Paper')">Paper</a></li>
-                    <li><a onclick="gameResult('Scissors')">Scissors</a></li>
+                    <li><a onclick="moreChoices('Rock')">Rock</a></li>
+                    <li><a onclick="moreChoices('Paper')">Paper</a></li>
+                    <li><a onclick="moreChoices('Scissors')">Scissors</a></li>
+                    <li><a onclick="moreChoices('Lizard')">Lizard</a></li>
+                    <li><a onclick="moreChoices('Spock')">Spock</a></li>
                   </ul>
                 </div>
                 
@@ -112,5 +114,8 @@
       </div>
 
       <button type="button" class="btn btn-primary" onclick="resetScore()">Reset Score</button> 
+
+      
+   
 </body>
 </html>

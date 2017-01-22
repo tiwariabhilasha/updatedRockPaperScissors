@@ -43,5 +43,5 @@ function randomChoices(){
 window.onload = function (){
 	window.setInterval(function(){
   		randomChoices();
-	}, 5000);
+	}, 2000);
 }
