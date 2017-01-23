@@ -18,6 +18,7 @@ function gameResult(choice) {
    	choices(choice1,choice2)
    	
 	}
+	/*passing the choices to the function*/
 	function choices(choice1,choice2){
    		if(choice1 === choice2){
 			resultofGame('tie');

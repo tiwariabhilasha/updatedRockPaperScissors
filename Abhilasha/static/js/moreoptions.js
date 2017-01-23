@@ -1,3 +1,4 @@
+/*Function to randomly make a choice by computer, since here we have 5 choices so could'nt utilise the earlier function*/
 function moreChoices(choice){
 	document.getElementById("dropdownMenu1").innerHTML = choice;
     var yourChoice = document.getElementById("dropdownMenu1").innerHTML;
@@ -19,7 +20,8 @@ function moreChoices(choice){
    	choice2 = document.getElementById('compChoice').innerHTML.toLowerCase();
    	moreChoicesResults(choice1,choice2)
 }
-
+/*Passing the choices made by user and the computer to the function*/
+/*resultofGame is the function which passes the value of the result and respective alerts are shown in the UI*/
 function moreChoicesResults(choice1,choice2){
 	if(choice1 === choice2){
 		resultofGame('tie');
